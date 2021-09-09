@@ -1,0 +1,71 @@
+body {
+  font-family: Akaya Kanadaka, cursive;
+  margin: 0;
+  background-color:rgb(190, 163, 180);
+  color: whitesmoke;
+
+  }
+  .nav ul {
+    
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-weight:bold;
+  }
+  .header {
+    background-color: rgb(114, 107, 107);
+    overflow: hidden;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    width: 1300px;
+    margin: auto;
+  }
+  
+  .nav ul li a:hover {
+      background-color: rgb(190, 163, 180);
+  }
+ form h3{
+   color: rgba(15, 15, 15, 0.836);
+ }
+
+ form input {
+   letter-spacing: 3px;
+ }
+
+ #sendA {
+  width: 20%;
+  padding: 10px;
+  display: block;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  border: 2px solid #793a9e;
+  cursor: pointer;
+  background: #8e31c4;
+  color: #ffffff;
+}
+
+#sendA:hover {
+  background: #be8fda;
+  border: 2px solid #be8fda;
+}
+
+#q10 {
+  width: 170px;
+  padding: 10px;
+  border-radius: 15px;
+ font-size: 14px;
+letter-spacing: 2px;
+border: 2px solid #ced8d8;
+              
+}
+ 

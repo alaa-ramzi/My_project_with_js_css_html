@@ -1,0 +1,135 @@
+body {
+font-family: Akaya Kanadaka, cursive;
+margin: 0;
+}
+.nav ul {
+  
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 2rem;
+  font-weight:bold;
+}
+.header {
+  background-color: rgb(114, 107, 107);
+  overflow: hidden;
+}
+.nav {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  align-items: center;
+  width: 1300px;
+  margin: auto;
+}
+.nav ul li a:hover {
+    background-color: rgb(143,111,131);
+}
+
+.gallery-section {
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(143,111,131);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -40px;
+    color:rgb(116, 68, 97);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select:none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #832ab6;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: rgb(116, 68, 97);
+    padding: 1px 16px;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 10%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .social-media {
+    display: flex;
+    align-items: center;
+    text-align:center;
+    width: auto;
+    height: 55px;
+    background-color: rgb(114, 107, 107); 
+    margin-bottom: 0;
+    padding-left: 45%;
+  }
+  

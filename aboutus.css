@@ -1,0 +1,119 @@
+body {
+  font-family: Akaya Kanadaka, cursive;
+  margin: 0;
+  padding: 0;
+  background :rgb(207, 184, 199);
+
+}
+
+.nav ul {
+    
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-weight:bold;
+    font-size: 17px;
+  }
+  .header {
+    background-color: rgb(114, 107, 107);
+    overflow: hidden;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    width: 1300px;
+    margin: auto;
+  }
+ 
+  .nav ul li a:hover {
+    background-color: rgb(143,111,131);
+
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+   .about-section {
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(143,111,131);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  .card {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 210px;
+    width: 900px;
+    height:350px;
+    
+  }
+
+  .card img {
+    float: right;
+    border-radius: 50px;
+    border: 6px double #bbc0c0;
+    box-shadow: 0px 0px 15px #bbc0c0;
+    margin-right: 50px;
+    margin-top: 20px;
+  }
+  
+  .container {
+    padding: 10px 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: black;
+  }
+  
+  p a {
+    width: 150px;
+    margin-left: 70px;
+    padding: 10px;
+    display: block;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    border: 2px solid #935bb4;
+    cursor: pointer;
+    background: #935bb4;
+    color: black;
+    text-decoration: none;
+  }
+
+  p a:hover {
+    background: #be8fda;
+    border: 2px solid #be8fda;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  .social-media {
+    display: flex;
+    align-items: center;
+    text-align:center;
+    width: auto;
+    height: 50px;
+    background-color: rgb(114, 107, 107); 
+    margin-bottom: 0;
+    padding-left: 45%;
+  }

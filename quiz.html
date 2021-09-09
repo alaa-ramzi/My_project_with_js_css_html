@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+      <title>Books Box</title>
+      <meta name="keywords" content="home, about us, gallery ,form, game, quiz">
+      <meta description="" content="">
+      <link rel="icon" href="logo1 .jpg" type="logo-icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="quiz.css">
+    </head>
+
+        <body>
+            
+          <div class="header">
+            <div class="nav">
+            <img src="logo1 .jpg" alt="image" width="80px" height= "auto"/>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="final game.html">Game</a></li>
+            </ul>
+          </div>
+        </div>   
+        
+        <div id="quiz-time-left" style=" color:rgb(26, 24, 24); text-align: right;  font-size: 25px; margin-top: 25px; margin-right:30px;" ></div>
+           
+        <form name="form" id="questions" onsubmit="return score()" style="margin-left:50px; font-size: 18px;">
+          <h3>1. What does HTML stand for?</h3>
+          <input type="radio" name="q1" value="a">a. "Hyper Text Markup Language"<br>
+          <input type="radio" name="q1" value="b">b. "Hyper Text Multiple Language"<br>
+          <input type="radio" name="q1" value="c">c. "Hyper Tool Multi Language" <br>
+        
+          <h3>2. What does CSS stand for?</h3>
+          <input type="radio" name="q2" value="a">a. "Colorful Style Sheet"<br>
+          <input type="radio" name="q2" value="b">b. "Computer Style Sheet"<br>
+          <input type="radio" name="q2" value="c">c. "Cascading Style Sheet"<br>
+          
+          <h3>3. What does PHP stand for?</h3>
+          <input type="radio" name="q3" value="a">a. "Hypertext Preprocessor"<br>
+          <input type="radio" name="q3" value="b">b. "Hypertext Programming"<br>
+          <input type="radio" name="q3" value="c">c. "Hypertext Preprogramming"<br>
+
+          <h3>4. What does SQL stand for?</h3>  
+          <input type="radio" name="q4" value="a">a. "Stylesheet Query Language"<br>
+          <input type="radio" name="q4" value="b">b. "Statement Question Language"<br>
+          <input type="radio" name="q4" value="c">c. "Structured Query Language"<br>
+
+          <h3>5. What does XML stand for?</h3>
+          <input type="radio" name="q5" value="a">a. eXtensible Markup Language<br>
+          <input type="radio" name="q5" value="b">b. eXecutable Multiple Language<br>
+          <input type="radio" name="q5" value="c">c. eXTra Multi-Program Language<br>
+
+          <h3>6. Which CSS property controls the text size?</h3>
+          <input type="radio" name="q6" value="a">a. text-style<br>
+          <input type="radio" name="q6" value="b">b. text-size<br>
+          <input type="radio" name="q6" value="c">c. font-style<br>
+
+          <h3>7. How do you call a function named "myFunction"?</h3>
+          <input type="radio" name="q7" value="a">a. "call myFunction()"<br>
+          <input type="radio" name="q7" value="b">b. "myFunction()"<br>
+          <input type="radio" name="q7" value="c">c. "call function myFunction()"<br>
+
+          <h3>8. Which HTML attribute is used to define inline styles?</h3>
+          <input type="radio" name="q8" value="a">a. style<br>
+          <input type="radio" name="q8" value="b">b. styles<br>
+          <input type="radio" name="q8" value="c">c. class<br>
+
+          <h3>9. background-color is the property used to change the background color?</h3>
+          <input type="radio" name="q9" value="a">a. True<br>
+          <input type="radio" name="q9" value="b">b. False<br>
+          
+
+          <h3>10. ـــــ   property is used to change the text color of an element.</h3>
+          <input type="text" id= "q10" name="q10" placeholder="Enter your answer..."><br>
+
+          <br>
+          <input type="submit" id="sendA" value="Submit">
+          <br>
+          <p id="p" style="color: darkred; margin-bottom: 20px;"></p>
+        
+        </form>
+
+
+        <script>
+            
+            var total_seconds = 60 * 1;
+            var c_minutes = parseInt(total_seconds / 60);
+            var c_seconds = parseInt(total_seconds % 60);
+            var timer;
+
+            function CheckTime() {
+            document.getElementById("quiz-time-left").innerHTML = ' Time Left: ' + c_minutes + ' minutes ' + c_seconds + ' seconds ';
+
+            if (total_seconds <= 0) {
+                score();
+            } else {
+                total_seconds = total_seconds - 1;
+                c_minutes = parseInt(total_seconds / 60);
+                c_seconds = parseInt(total_seconds % 60);
+                timer = setTimeout(CheckTime, 1000);
+            }
+            }
+            timer = setTimeout(CheckTime, 1000);
+
+            function score() {
+            
+            clearInterval(timer);
+
+            //Referencing the value of the questions
+            var q1 = document.forms.form.q1.value;
+            var q2 = document.forms.form.q2.value;
+            var q3 = document.forms.form.q3.value;
+            var q4 = document.forms.form.q4.value;
+            var q5 = document.forms.form.q5.value;
+            var q6 = document.forms.form.q6.value;
+            var q7 = document.forms.form.q7.value;
+            var q8 = document.forms.form.q8.value;
+            var q9 = document.forms.form.q9.value;
+            var q10 = document.forms.form.q10.value;
+
+            // disable form
+            var elements = document.getElementById("questions").elements;
+            for (var i = 0, len = elements.length; i < len; ++i) {
+                elements[i].disabled = true;
+            }
+
+            //Array for the questions
+            var questions = [q1, q2, q3, q4, q5, q6, q7 ,q8 ,q9 ,q10 ];
+
+            //Answers for each question
+            var answers = ["a", "c", "a", "c" ,"a" ,"b" ,"b" ,"a", "a" ,"color"];
+
+            //variable to keep track of the points
+            var points = 0;
+            var total = 10;
+            //max score 
+
+            
+            for (var i = 0; i < total; i++) {
+                if (questions[i] == answers[i]) {
+                points = points + 1; 
+                }
+            }
+
+            
+            var q = document.getElementById("p");
+
+            q.style.fontSize = "27px";
+            q.style.textAlign = "center";
+            q.innerHTML = "You got " + points + " out of " + total +
+                "<br />" +
+                "you used " + (59 - Math.floor(total_seconds)) + " seconds";
+
+            return false;
+            }
+
+
+         </script>
+    </body>
+</html>

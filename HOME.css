@@ -1,0 +1,91 @@
+body {
+  font-family: Akaya Kanadaka, cursive;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+.nav ul {
+    
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-weight:bold;
+    font-size: 17px;
+  }
+  .header {
+    background-color: rgb(114, 107, 107);
+    overflow: hidden;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    width: 1300px;
+    margin: auto;
+  }
+ 
+  .nav ul li a:hover {
+    background-color: rgb(143,111,131);
+  
+  }
+#clock {
+  background-color: #474e5d;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 10px;
+  text-align:center;
+  border: 3px solid  #474e5d;
+  width: 1000px;
+  margin-left:150px;
+}
+
+#booksImg {
+   margin: 0px;
+   top: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70PX ;
+    grid-template-rows: 50px;
+    column-gap: 180px;
+    margin-top: 50px;
+    padding: 5px;
+    justify-items: center;
+       
+}
+#orange {
+ width: 200px;
+ cursor: pointer;
+}
+#blue {
+  width: 200px;
+  cursor: pointer;
+}
+#violet {
+  width: 200px;
+  cursor: pointer;
+}
+#random {
+  width: 200px;
+  cursor: pointer;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  text-align:center;
+  width: auto;
+  height: 55px;
+  background-color: rgb(114, 107, 107); 
+  margin-bottom: 0;
+  padding-left: 45%;
+}
